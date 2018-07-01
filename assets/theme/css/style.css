@@ -98,6 +98,7 @@ section {
   text-align: right; }
 
 @media (max-width: 767px) {
+	.navbar-logo { display: none !important; }
   .align-left, .align-center, .align-right, .mbr-section-btn, .mbr-section-title {
     text-align: center; } }
 /*! Font-weight  */

@@ -204,7 +204,10 @@
                     })
                     .css('position', 'relative');
                 
-                jarallax(document.querySelectorAll(".jarallax"));
+                jarallax(document.querySelectorAll('.jarallax'), {
+                  disableParallax: function () { return false; },
+                  disableVideo: function () { return false; }
+                });
                 
             }, 0);
         }
@@ -213,7 +216,7 @@
             $(card).jarallax('destroy').css('position', '');
         }
 
-        if ($.fn.jarallax && !$.isMobile()) {
+        if ($.fn.jarallax /*&& !$.isMobile()*/) {
             $(window).on('update.parallax', function(event) {
                 setTimeout(function() {
                     var $jarallax = $('.mbr-parallax-background');
